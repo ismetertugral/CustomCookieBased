@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<CookieContext>(opt =>
 {
-    opt.UseSqlServer("server=ISMETERTUGRALNB\\SQLEXPRESS; database=CookieDb; integrated security=true; TrustServerCertificate=True;");
+    opt.UseSqlServer("server=(localdb)\\MSSQLLocalDB; database=CookieDb; integrated security=true; TrustServerCertificate=True;");
 });
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opt =>
